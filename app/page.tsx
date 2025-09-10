@@ -12,7 +12,9 @@ export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0)
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set())
   const [typedText, setTypedText] = useState("")
+  const [hobbyTypedText, setHobbyTypedText] = useState("")
   const fullText = "Data Analysis & Machine Learning Enthusiast"
+  const hobbyText = "In my free time I enjoy reading books, listening to pop music, and learning to cook."
 
   const heroRef = useRef<HTMLElement>(null)
   const aboutRef = useRef<HTMLElement>(null)
@@ -33,6 +35,26 @@ export default function Portfolio() {
   }, [])
 
   useEffect(() => {
+    console.log("[v0] About section visible:", visibleSections.has("about"))
+    console.log("[v0] Current hobby text:", hobbyTypedText)
+
+    if (visibleSections.has("about") && hobbyTypedText === "") {
+      console.log("[v0] Starting hobby typing animation")
+      let index = 0
+      const timer = setInterval(() => {
+        if (index <= hobbyText.length) {
+          setHobbyTypedText(hobbyText.slice(0, index))
+          index++
+        } else {
+          console.log("[v0] Hobby typing animation completed")
+          clearInterval(timer)
+        }
+      }, 50)
+      return () => clearInterval(timer)
+    }
+  }, [visibleSections, hobbyTypedText, hobbyText])
+
+  useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -42,6 +64,7 @@ export default function Portfolio() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log("[v0] Section observed:", entry.target.id, "visible:", entry.isIntersecting)
           if (entry.isIntersecting) {
             setVisibleSections((prev) => new Set([...prev, entry.target.id]))
           }
@@ -51,6 +74,10 @@ export default function Portfolio() {
     )
 
     const sections = [aboutRef.current, workRef.current, skillsRef.current].filter(Boolean)
+    console.log(
+      "[v0] Observing sections:",
+      sections.map((s) => s?.id),
+    )
     sections.forEach((section) => section && observer.observe(section))
 
     return () => observer.disconnect()
@@ -108,7 +135,7 @@ export default function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-muted rounded-lg transition-all duration-300"
+                  className="block w-full text-left px-4 py-2 text-slate-900 dark:text-slate-100 hover:text-primary hover:bg-muted rounded-lg transition-all duration-300"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.label}
@@ -170,18 +197,18 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className= "mb-3">
-              <h3 className="text-3xl font-bold text-foreground">Hi, </h3>
-              <h3 className="text-3xl font-bold text-foreground">I'm Immanuel Simarsoit </h3>
+              <div className="mb-3">
+                <h3 className="text-3xl font-bold text-foreground">Hi, </h3>
+                <h3 className="text-3xl font-bold text-foreground">I'm Immanuel Simarsoit </h3>
               </div>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                With over 5 years of experience in web development and design, I specialize in creating user-centered
-                digital experiences. I believe in the power of clean code and thoughtful design to solve real-world
-                problems.
+                I have a strong passion for data management. I enjoy working with raw data, transforming it into meaningful information, and generating insights that drive decision-making. With a keen interest in technology, I am enthusiastic about solving problems and creating data-driven solutions.
               </p>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects,
-                or enjoying a good cup of coffee while sketching new ideas.
+              <p className="text-muted-foreground mb-6 leading-relaxed min-h-[1.5em]">
+                {hobbyTypedText || (visibleSections.has("about") ? "" : hobbyText)}
+                {visibleSections.has("about") && hobbyTypedText.length < hobbyText.length && (
+                  <span className="animate-pulse text-primary">|</span>
+                )}
               </p>
               <div className="flex space-x-4">
                 <Button
