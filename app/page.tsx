@@ -157,8 +157,8 @@ export default function Portfolio() {
               {[
                 { label: "About", id: "about" },
                 { label: "Work", id: "work" },
-                { label: "Skills", id: "skills" },
-                { label: "Contact", id: "contact" },
+                { label: "Certificate", id: "certificate" },
+                { label: "Experience", id: "experience" },
               ].map((item, index) => (
                 <button
                   key={item.id}
