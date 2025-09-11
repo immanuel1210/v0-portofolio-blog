@@ -294,14 +294,16 @@ export default function Portfolio() {
               {[
                 {
                   title: "Time Series Forecasting of Gold (USD) Prices with LSTM",
-                  description: "Developed a time series forecasting model to predict Gold-USD prices using 10 years of historical data with LSTM.",
+                  description:
+                    "Developed a time series forecasting model to predict Gold-USD prices using 10 years of historical data with LSTM.",
                   tech: ["ML", "Python", "LSTM"],
                   image: "/gold-prediction-illustration.jpeg",
                   link: "https://github.com/immanuel1210/Prediksi-Harga-Emas-menggunakan-metode-LSTM",
                 },
                 {
                   title: "Risk, Return, and Liquidity Analysis of Banking Stocks vs. IHSG for the Period 2020–2025",
-                  description: "Comparative performance analysis of three Indonesian state-owned banks (BMRI, BBRI, BBNI) compared to the Composite Stock Price Index (IHSG) from 2020 to 2025",
+                  description:
+                    "Comparative performance analysis of three Indonesian state-owned banks (BMRI, BBRI, BBNI) compared to the Composite Stock Price Index (IHSG) from 2020 to 2025",
                   tech: ["Excel", "Data Analysis", "Data Visualization"],
                   image: "/chart.jpg",
                   link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
@@ -361,21 +363,20 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-foreground mb-12 text-center">Skills & Technologies</h3>
           <div className="flex justify-center">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   category: "Analysis",
-                  skills: ["Data Analysis", "Data Visualization", "Data Scienttis", "Macbine Learning"],
+                  skills: ["Data Analysis", "Data Visualization", "Data Scientist", "Machine Learning"],
                 },
                 {
                   category: "Tools",
-                  skills: ["Python", "Microsoft Office", "MySQL","Power BI"],
+                  skills: ["Python", "Microsoft Office", "MySQL", "Power BI"],
                 },
                 {
                   category: "Soft Skill",
-                  skills: ["Adaptability", "Responsibilty", "Critical Thinking", "Problem Solving"],
+                  skills: ["Adaptability", "Responsibility", "Critical Thinking", "Problem Solving"],
                 },
-               ,
               ].map((skillGroup, index) => (
                 <Card
                   key={index}
