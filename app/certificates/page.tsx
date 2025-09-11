@@ -31,45 +31,45 @@ export default function Certificates() {
 
   const certificates = [
     {
-      title: "Data Science Professional Certificate",
-      issuer: "IBM",
+      title: "Microsoft Certified: Power BI Data Analyst Associate",
+      issuer: "Microsoft",
       date: "2024",
       description:
-        "Comprehensive program covering data science methodologies, machine learning, and data visualization techniques.",
-      skills: ["Python", "Machine Learning", "Data Visualization", "SQL"],
-      image: "/data-science-certificate.png",
-      credentialUrl: "#",
-      type: "Professional",
+        "The Microsoft Certified: Power BI Data Analyst Associate is a certificate issued by Microsoft to individuals who have completed and passed the PL-300 exam. This exam, held by Microsoft, tests a candidate's understanding of how to use the tools in Power BI.",
+      skills: ["Power BI", "Data Visualization", "Data Analysis","Data Storytelling"],
+      image: "/Microsoft-Certified.png",
+      credentialUrl: "https://drive.google.com/file/d/1M4NJUczGkUJLmvmGKz2RXbgbQwiDPjlX/view?usp=sharing",
+      type: "Intermediete",
     },
     {
-      title: "Machine Learning Specialization",
-      issuer: "Stanford University",
-      date: "2023",
-      description: "Advanced coursework in supervised learning, unsupervised learning, and neural networks.",
-      skills: ["TensorFlow", "Neural Networks", "Deep Learning", "Python"],
-      image: "/machine-learning-certificate.jpg",
-      credentialUrl: "#",
-      type: "Specialization",
+      title: "Data Science (Fresh Graduate Academy)",
+      issuer: "Digital Talent Scolarship - Kominfo",
+      date: "2024",
+      description: "The Data Science (Fresh Graduate Academy) is a program organized by the Digital Talent Scholarship - Kominfo for undergraduate students and professional workers. It teaches participants how to model, visualize, and analyze data using Power BI tools.",
+      skills: ["Power BI", "Data Visualization", "Data Analyzing"],
+      image: "/Fresh-Graduate.png",
+      credentialUrl: "https://drive.google.com/file/d/1cuhPNfj8nDniP-oR7FwC27qKucFjQF32/view?usp=sharing",
+      type: "Intermediete",
     },
     {
-      title: "Power BI Data Analyst Associate",
-      issuer: "Microsoft",
-      date: "2023",
+      title: "Excel Basics for Data Analysis",
+      issuer: "IBM",
+      date: "2024",
       description: "Certification in data modeling, visualization, and business intelligence using Power BI.",
-      skills: ["Power BI", "DAX", "Data Modeling", "Business Intelligence"],
-      image: "/power-bi-certificate.jpg",
-      credentialUrl: "#",
-      type: "Associate",
+      skills: ["Excel", "Data Analysis", "Data Preprocessing", "Data Visualization"],
+      image: "/Excel-Basics.png",
+      credentialUrl: "https://drive.google.com/file/d/1HEtZj9CuEYR0_IAHYoyQSr7OoCGU44r1/view?usp=sharing",
+      type: "Intermediete",
     },
     {
-      title: "SQL for Data Science",
-      issuer: "University of California, Davis",
-      date: "2022",
-      description: "Comprehensive training in SQL for data analysis and database management.",
-      skills: ["SQL", "Database Design", "Data Analysis", "MySQL"],
-      image: "/sql-certificate.jpg",
-      credentialUrl: "#",
-      type: "Course",
+      title: "TOEFL ITP",
+      issuer: "ETS",
+      date: "2025",
+      description: "English Proficiency Test.",
+      skills: ["English"],
+      image: "/logo-ets.webp",
+      credentialUrl: "https://drive.google.com/file/d/1XeTemciPsByZS0tM_JxtOEJEBTOTQ95C/view?usp=sharing",
+      type: "Intermediete",
     },
   ]
 
@@ -98,11 +98,10 @@ export default function Certificates() {
             <Award className="h-8 w-8 text-primary" />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
-            Professional Certificates
+            Certificates
           </h2>
           <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto">
-            A collection of my professional certifications and achievements in data science, machine learning, and
-            business intelligence.
+            A collection of my certifications and achievements for my skills.
           </p>
         </div>
       </section>
@@ -174,14 +173,6 @@ export default function Certificates() {
                         <ExternalLink className="mr-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
                         View Credential
                       </a>
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="p-0 h-auto group/btn hover:text-primary transition-colors"
-                    >
-                      <Download className="mr-2 h-3 w-3 group-hover/btn:translate-y-1 transition-transform" />
-                      Download
                     </Button>
                   </div>
                 </CardContent>
