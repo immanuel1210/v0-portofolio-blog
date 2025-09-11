@@ -108,6 +108,10 @@ export default function Portfolio() {
   }, [])
 
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === "certificate") {
+      window.location.href = "/certificates"
+      return
+    }
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
     setIsMenuOpen(false)
   }
