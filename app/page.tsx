@@ -239,27 +239,36 @@ export default function Portfolio() {
                 .
               </p>
               <div className="flex space-x-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="hover:scale-110 hover:shadow-md transition-all duration-300 bg-transparent"
-                >
-                  <Github className="h-4 w-4 mr-2" />
-                  GitHub
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="hover:scale-110 hover:shadow-md transition-all duration-300 bg-transparent"
-                >
-                  <Linkedin className="h-4 w-4 mr-2" />
-                  LinkedIn
-                </Button>
+                <a href="https://github.com/immanuel1210" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="hover:scale-110 hover:shadow-md transition-all duration-300 bg-transparent"
+                  >
+                    <Github className="h-4 w-4 mr-2" />
+                    GitHub
+                  </Button>
+                </a>
+                <a href="https://www.linkedin.com/in/immanuel-simarsoit/" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="hover:scale-110 hover:shadow-md transition-all duration-300 bg-transparent"
+                  >
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    LinkedIn
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="relative group">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl group-hover:scale-105 transition-all duration-500 group-hover:shadow-2xl">
-                <div className="absolute inset-4 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-xl animate-pulse"></div>
+              <div className="aspect-square rounded-2xl overflow-hidden group-hover:scale-105 transition-all duration-500 group-hover:shadow-2xl">
+                <img
+                  src="/profile-photo.jpg"
+                  alt="Immanuel Simarsoit on a boat with turquoise water and tropical forest background"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           </div>
