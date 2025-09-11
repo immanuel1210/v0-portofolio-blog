@@ -293,16 +293,16 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
               {[
                 {
-                  title: "E-commerce Platform",
-                  description: "Modern shopping experience with seamless checkout",
-                  tech: ["React", "Node.js", "Stripe"],
+                  title: "Time Series Forecasting of Gold (USD) Prices with LSTM",
+                  description: "Developed a time series forecasting model to predict Gold-USD prices using 10 years of historical data with LSTM.",
+                  tech: ["ML", "Python", "LSTM"],
                   image: "/gold-prediction-illustration.jpeg",
                   link: "https://github.com/immanuel1210/Prediksi-Harga-Emas-menggunakan-metode-LSTM",
                 },
                 {
-                  title: "Task Management App",
-                  description: "Collaborative workspace for remote teams",
-                  tech: ["Next.js", "TypeScript", "Prisma"],
+                  title: "Risk, Return, and Liquidity Analysis of Banking Stocks vs. IHSG for the Period 2020–2025",
+                  description: "Comparative performance analysis of three Indonesian state-owned banks (BMRI, BBRI, BBNI) compared to the Composite Stock Price Index (IHSG) from 2020 to 2025",
+                  tech: ["Excel", "Data Analysis", "Data Visualization"],
                   image: "/clean-task-management-dashboard.jpg",
                   link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
                 },
