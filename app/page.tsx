@@ -132,7 +132,7 @@ export default function Portfolio() {
                 { label: "About", id: "about" },
                 { label: "Work", id: "work" },
                 { label: "Certificate", id: "certificate" },
-                { label: "Contact", id: "contact" },
+                { label: "Experience", id: "experience" },
               ].map((item) => (
                 <button
                   key={item.id}
@@ -416,14 +416,16 @@ export default function Portfolio() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="group hover:scale-105 hover:shadow-lg transition-all duration-300" asChild>
-              <a href="https://your-portfolio-url.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/immanuel1210" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
                 View Full Portfolio
               </a>
             </Button>
-            <Button size="lg" className="group hover:scale-105 hover:shadow-lg transition-all duration-300">
-              <Mail className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-              Get In Touch
+            <Button size="lg" className="group hover:scale-105 hover:shadow-lg transition-all duration-300" asChild>
+              <a href="mailto:immanuelsimarsoit@gmail.com">
+                <Mail className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                Get In Touch
+              </a>
             </Button>
           </div>
         </div>
