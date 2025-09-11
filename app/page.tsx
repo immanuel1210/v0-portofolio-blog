@@ -291,19 +291,14 @@ export default function Portfolio() {
                 title: "E-commerce Platform",
                 description: "Modern shopping experience with seamless checkout",
                 tech: ["React", "Node.js", "Stripe"],
-                image: "/modern-ecommerce-interface.png",
+                image: "/gold-prediction-illustration.jpeg",
+                link : "https://github.com/immanuel1210/Prediksi-Harga-Emas-menggunakan-metode-LSTM"
               },
               {
                 title: "Task Management App",
                 description: "Collaborative workspace for remote teams",
                 tech: ["Next.js", "TypeScript", "Prisma"],
                 image: "/clean-task-management-dashboard.jpg",
-              },
-              {
-                title: "Portfolio Website",
-                description: "Minimalist portfolio for a creative agency",
-                tech: ["React", "Tailwind", "Framer Motion"],
-                image: "/minimalist-portfolio-website.png",
               },
             ].map((project, index) => (
               <Card
