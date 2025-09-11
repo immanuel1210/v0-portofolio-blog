@@ -360,49 +360,48 @@ export default function Portfolio() {
       >
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-foreground mb-12 text-center">Skills & Technologies</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                category: "Frontend",
-                skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-              },
-              {
-                category: "Backend",
-                skills: ["Node.js", "Python", "PostgreSQL", "MongoDB"],
-              },
-              {
-                category: "Design",
-                skills: ["Figma", "Adobe XD", "Sketch", "Prototyping"],
-              },
-              {
-                category: "Tools",
-                skills: ["Git", "Docker", "AWS", "Vercel"],
-              },
-            ].map((skillGroup, index) => (
-              <Card
-                key={index}
-                className="border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
-                    {skillGroup.category}
-                  </h4>
-                  <ul className="space-y-2">
-                    {skillGroup.skills.map((skill, skillIndex) => (
-                      <li
-                        key={skill}
-                        className="text-muted-foreground flex items-center hover:text-foreground transition-colors cursor-default"
-                        style={{ animationDelay: `${index * 150 + skillIndex * 100}ms` }}
-                      >
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  category: "Analysis",
+                  skills: ["Data Analysis", "Data Visualization", "Data Scienttis", "Macbine Learning"],
+                },
+                {
+                  category: "Tools",
+                  skills: ["Python", "Microsoft Office", "MySQL","Power BI"],
+                },
+                {
+                  category: "Soft Skill",
+                  skills: ["Adaptability", "Responsibilty", "Critical Thinking", "Problem Solving"],
+                },
+               ,
+              ].map((skillGroup, index) => (
+                <Card
+                  key={index}
+                  className="border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  <CardContent className="p-6">
+                    <h4 className="text-lg font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
+                      {skillGroup.category}
+                    </h4>
+                    <ul className="space-y-2">
+                      {skillGroup.skills.map((skill, skillIndex) => (
+                        <li
+                          key={skill}
+                          className="text-muted-foreground flex items-center hover:text-foreground transition-colors cursor-default"
+                          style={{ animationDelay: `${index * 150 + skillIndex * 100}ms` }}
+                        >
+                          <div className="w-2 h-2 bg-primary rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
+                          {skill}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
