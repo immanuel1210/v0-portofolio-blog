@@ -202,8 +202,12 @@ export default function Portfolio() {
                 variant="outline"
                 size="lg"
                 className="hover:scale-105 transition-all duration-300 bg-transparent"
+                asChild
               >
-                Download Resume
+                <a href="https://your-portfolio-url.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Visit Portfolio
+                </a>
               </Button>
             </div>
           </div>
@@ -285,58 +289,63 @@ export default function Portfolio() {
       >
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-foreground mb-12 text-center">Featured Work</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "E-commerce Platform",
-                description: "Modern shopping experience with seamless checkout",
-                tech: ["React", "Node.js", "Stripe"],
-                image: "/gold-prediction-illustration.jpeg",
-                link : "https://github.com/immanuel1210/Prediksi-Harga-Emas-menggunakan-metode-LSTM"
-              },
-              {
-                title: "Task Management App",
-                description: "Collaborative workspace for remote teams",
-                tech: ["Next.js", "TypeScript", "Prisma"],
-                image: "/clean-task-management-dashboard.jpg",
-              },
-            ].map((project, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-500 border-border hover:-translate-y-2 hover:scale-105"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className="aspect-video bg-muted rounded-t-lg overflow-hidden relative">
-                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
-                    <ExternalLink className="h-8 w-8 text-white" />
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
+              {[
+                {
+                  title: "E-commerce Platform",
+                  description: "Modern shopping experience with seamless checkout",
+                  tech: ["React", "Node.js", "Stripe"],
+                  image: "/gold-prediction-illustration.jpeg",
+                  link: "https://github.com/immanuel1210/Prediksi-Harga-Emas-menggunakan-metode-LSTM",
+                },
+                {
+                  title: "Task Management App",
+                  description: "Collaborative workspace for remote teams",
+                  tech: ["Next.js", "TypeScript", "Prisma"],
+                  image: "/clean-task-management-dashboard.jpg",
+                  link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
+                },
+              ].map((project, index) => (
+                <Card
+                  key={index}
+                  className="group hover:shadow-xl transition-all duration-500 border-border hover:-translate-y-2 hover:scale-105"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
+                  <div className="aspect-video bg-muted rounded-t-lg overflow-hidden relative">
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
+                      <ExternalLink className="h-8 w-8 text-white" />
+                    </div>
+                    <img
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h4 className="text-xl font-semibold text-foreground mb-2">{project.title}</h4>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="p-0 h-auto group/btn hover:text-primary transition-colors"
-                  >
-                    View Project
-                    <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardContent className="p-6">
+                    <h4 className="text-xl font-semibold text-foreground mb-2">{project.title}</h4>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tech.map((tech) => (
+                        <Badge key={tech} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="p-0 h-auto group/btn hover:text-primary transition-colors"
+                      >
+                        View Project
+                        <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -406,12 +415,15 @@ export default function Portfolio() {
             Have a project in mind? I'd love to hear about it and discuss how we can bring your ideas to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="group hover:scale-105 hover:shadow-lg transition-all duration-300" asChild>
+              <a href="https://your-portfolio-url.com" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                View Full Portfolio
+              </a>
+            </Button>
             <Button size="lg" className="group hover:scale-105 hover:shadow-lg transition-all duration-300">
               <Mail className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
               Get In Touch
-            </Button>
-            <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300 bg-transparent">
-              Schedule a Call
             </Button>
           </div>
         </div>
@@ -429,7 +441,7 @@ export default function Portfolio() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="www.linkedin.com/in/immanuel-simarsoit"
+                href="https://www.linkedin.com/in/immanuel-simarsoit/"
                 className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-125 hover:-translate-y-1"
               >
                 <Linkedin className="h-5 w-5" />
