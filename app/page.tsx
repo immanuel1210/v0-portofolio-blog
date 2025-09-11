@@ -303,7 +303,7 @@ export default function Portfolio() {
                   title: "Risk, Return, and Liquidity Analysis of Banking Stocks vs. IHSG for the Period 2020–2025",
                   description: "Comparative performance analysis of three Indonesian state-owned banks (BMRI, BBRI, BBNI) compared to the Composite Stock Price Index (IHSG) from 2020 to 2025",
                   tech: ["Excel", "Data Analysis", "Data Visualization"],
-                  image: "/clean-task-management-dashboard.jpg",
+                  image: "/chart.jpg",
                   link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
                 },
               ].map((project, index) => (
