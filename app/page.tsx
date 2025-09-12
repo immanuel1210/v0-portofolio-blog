@@ -208,9 +208,9 @@ export default function Portfolio() {
                 className="hover:scale-105 transition-all duration-300 bg-transparent"
                 asChild
               >
-                <a href="https://your-portfolio-url.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1KPwuYr7kAfghn3JKj2RmMiAGboh3rrCY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" />
-                  Visit Portfolio
+                  Download CV
                 </a>
               </Button>
             </div>
