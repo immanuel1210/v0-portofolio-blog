@@ -68,7 +68,7 @@ export default function Certificates() {
       description: "English Proficiency Test.",
       skills: ["English"],
       image: "/logo-ets.webp",
-      credentialUrl: "https://drive.google.com/file/d/1XeTemciPsByZS0tM_JxtOEJEBTOTQ95C/view?usp=sharing",
+      credentialUrl: "https://drive.google.com/file/d/1-JdxfCOABJkQzSkzlWdSAIs-hJXdIH7H/view?usp=sharing",
       type: "Intermediete",
     },
   ]
