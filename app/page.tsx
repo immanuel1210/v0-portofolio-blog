@@ -420,22 +420,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section
-        id="experience"
-        ref={experienceRef}
-        className={`py-20 px-6 transition-all duration-1000 ${
-          visibleSections.has("experience") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-bold text-foreground mb-12 text-center">Experience</h3>
-          <div className="flex justify-center">
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">{/* Experience content goes here */}</div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
