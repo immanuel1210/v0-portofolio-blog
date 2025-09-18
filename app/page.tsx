@@ -24,6 +24,7 @@ export default function Portfolio() {
   const aboutRef = useRef<HTMLElement>(null)
   const workRef = useRef<HTMLSection>(null)
   const skillsRef = useRef<HTMLSection>(null)
+  const experienceRef = useRef<HTMLSection>(null)
 
   useEffect(() => {
     let index = 0
@@ -101,7 +102,7 @@ export default function Portfolio() {
       { threshold: 0.1 },
     )
 
-    const sections = [aboutRef.current, workRef.current, skillsRef.current].filter(Boolean)
+    const sections = [aboutRef.current, workRef.current, skillsRef.current, experienceRef.current].filter(Boolean)
     sections.forEach((section) => section && observer.observe(section))
 
     return () => observer.disconnect()
@@ -110,6 +111,10 @@ export default function Portfolio() {
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "certificate") {
       window.location.href = "/certificates"
+      return
+    }
+    if (sectionId === "experience") {
+      window.location.href = "/experience"
       return
     }
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
@@ -208,7 +213,11 @@ export default function Portfolio() {
                 className="hover:scale-105 transition-all duration-300 bg-transparent"
                 asChild
               >
-                <a href="https://drive.google.com/file/d/1ASJPImvuhwC8dKzzKEVJMww5kcVUJ-my/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://drive.google.com/file/d/1ASJPImvuhwC8dKzzKEVJMww5kcVUJ-my/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   Download CV
                 </a>
@@ -407,6 +416,22 @@ export default function Portfolio() {
                 </Card>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section
+        id="experience"
+        ref={experienceRef}
+        className={`py-20 px-6 transition-all duration-1000 ${
+          visibleSections.has("experience") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-foreground mb-12 text-center">Experience</h3>
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl">{/* Experience content goes here */}</div>
           </div>
         </div>
       </section>
