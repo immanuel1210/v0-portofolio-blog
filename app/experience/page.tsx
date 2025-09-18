@@ -11,7 +11,12 @@ export default function Experience() {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set())
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+  let observer: IntersectionObserver | null = null
+
+  const setupObserver = () => {
+    if (observer) observer.disconnect()
+    
+    observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -24,10 +29,27 @@ export default function Experience() {
     )
 
     const items = document.querySelectorAll("[data-index]")
-    items.forEach((item) => observer.observe(item))
+    items.forEach((item) => observer?.observe(item))
+  }
 
-    return () => observer.disconnect()
-  }, [])
+  // Setup observer pertama kali
+  setupObserver()
+
+  // MutationObserver untuk mendeteksi perubahan DOM
+  const mutationObserver = new MutationObserver(() => {
+    setupObserver()
+  })
+
+  mutationObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  })
+
+  return () => {
+    observer?.disconnect()
+    mutationObserver.disconnect()
+  }
+}, [])
 
   const workExperiences = [
     {
@@ -42,55 +64,61 @@ export default function Experience() {
         "Trusted as Team Leader for the Company Visit Event of Universiti Malaysia Sarawak at Pelindo Multi Terminal, where I coordinated and collaborated with fellow interns to ensure the event was successfully executed.",
         "Appointed as Team Leader for the Tour Talent: Kampung Komunitas Ibu Profesional Sumatera Utara event, collaborating with mentors and fellow interns to organize participant welcoming activities at Bandar Deli Passenger Terminal. Responsible for introducing the company’s roles and functions to participants while ensuring the event was well-coordinated and successfully executed.",
       ],
-      skills: ["Data Entry", "Spreadsheet", "Graphic Design", "Figma", "Leadership","Responsibility","Team Work","Time Management","Communication","Problem Solving"],
-    }
+      skills: [
+        "Data Entry",
+        "Spreadsheet",
+        "Graphic Design",
+        "Figma",
+        "Leadership",
+        "Responsibility",
+        "Team Work",
+        "Time Management",
+        "Communication",
+        "Problem Solving",
+      ],
+    },
   ]
 
   const organizationExperiences = [
     {
-      title: "Vice President",
-      company: "Data Science Student Association",
-      location: "University of North Sumatra",
-      period: "Aug 2023 - Jul 2024",
-      type: "Leadership",
+      title: "Association of Intern",
+      company: "PT Pelindo Multi Terminal",
+      location: "Medan",
+      period: "May 2025 - Aug 2025",
+      type: "-",
       description:
-        "Led a team of 50+ members in organizing data science workshops, competitions, and networking events. Managed organizational strategy and collaborated with industry partners.",
+        "Managed the Instagram account of the Association of Interns at PT Pelindo Multi Terminal, creating and publishing content to document activities and strengthen networking among interns.",
       achievements: [
-        "Organized 8 major workshops with 500+ participants",
-        "Increased membership by 60%",
-        "Secured partnerships with 5 tech companies",
-      ],
-      skills: ["Leadership", "Event Management", "Strategic Planning", "Public Speaking", "Team Management"],
+        "Managed the official Instagram account of the Intern Association, creating and publishing content to highlight intern activities and enhance engagement."],
+      skills: ["Graphic Design", "Video Editing", "Filmora", "Figma", "Social Media Management", "Content Creation"],
     },
     {
-      title: "Project Manager",
-      company: "Tech Innovation Club",
-      location: "University of North Sumatra",
-      period: "Jan 2023 - Dec 2023",
-      type: "Volunteer",
+      title: "Christian Students of IT USU",
+      company: "Universitas Sumatera Utara",
+      location: "Medan",
+      period: "Aug 2022 -Nov 2022",
+      type: "-",
       description:
-        "Managed multiple technology projects and hackathons. Coordinated between different teams and ensured project deliverables met quality standards and deadlines.",
+        "I served as a member of the Publication, Decoration, and Documentation Division at Christian Student of IT, Universitas Sumatera Utara, where I collaborated with cross-division teams to prepare publication materials and visual decorations, documented events, and contributed to enhancing visibility and engagement through creative content and design suppor.",
       achievements: [
-        "Successfully delivered 12 projects on time",
-        "Led team of 25 developers and designers",
-        "Won 2nd place in National Hackathon",
+        "Designed and produced promotional materials, including 1 flyer and 1 banner, to boost event visibility ",
+        "Set up event decorations and ensured alignment with overall theme ",
+        "Coordinated with Public Relations and Event Divisions to maintain consistent branding and messaging ",
       ],
-      skills: ["Project Management", "Agile Methodology", "Team Coordination", "Problem Solving", "Communication"],
+      skills: ["Team Work", "Graphic Design", "Adobe Illustrator", "Figma", "Time Management","Critical Thinking","Problem Solving"],
     },
     {
-      title: "Community Outreach Coordinator",
-      company: "Digital Literacy Foundation",
-      location: "Medan, Indonesia",
-      period: "Mar 2022 - Aug 2023",
-      type: "Volunteer",
+      title: "Chief of Rohani Kristen",
+      company: "SMA Negeri 2 Medan",
+      location: "Medan",
+      period: "2017 - 2018",
+      type: "-",
       description:
-        "Organized digital literacy programs for underserved communities. Developed curriculum and trained volunteers to teach basic computer skills and digital awareness.",
+        "Served as Head of the Christian Spiritual Division in the Student Council of SMAN 2 Medan, leading and collaborating with student groups to organize spiritual programs and supporting major school events such as art performances, Independence Day, and graduation ceremonies.",
       achievements: [
-        "Trained 200+ community members",
-        "Established 3 learning centers",
-        "Created comprehensive training materials",
+        "Successfully organized the christmas event in school",
       ],
-      skills: ["Community Engagement", "Curriculum Development", "Training", "Social Impact", "Volunteer Management"],
+      skills: ["Leadership", "Team Work", "Event Organizer", "Communication", "Problem Solving"],
     },
   ]
 
@@ -163,20 +191,22 @@ export default function Experience() {
 
                     <p className="text-muted-foreground mb-6 leading-relaxed">{exp.description}</p>
 
-                    <div className="mb-6">
-                      <h6 className="text-sm font-semibold text-foreground mb-3">Key Achievements:</h6>
-                      <ul className="space-y-2">
-                        {exp.achievements.map((achievement, achIndex) => (
-                          <li
-                            key={achIndex}
-                            className="text-muted-foreground flex items-start hover:text-foreground transition-colors"
-                          >
-                            <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 group-hover:scale-150 transition-transform duration-300"></div>
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {exp.achievements.length > 0 && (
+                      <div className="mb-6">
+                        <h6 className="text-sm font-semibold text-foreground mb-3">Description:</h6>
+                        <ul className="space-y-2">
+                          {exp.achievements.map((achievement, achIndex) => (
+                            <li
+                              key={achIndex}
+                              className="text-muted-foreground flex items-start hover:text-foreground transition-colors"
+                            >
+                              <div className="w-2 h-2 bg-primary rounded-full mr-3 mt-2 group-hover:scale-150 transition-transform duration-300"></div>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
                     <div>
                       <h6 className="text-sm font-semibold text-foreground mb-3">Technologies & Skills:</h6>
