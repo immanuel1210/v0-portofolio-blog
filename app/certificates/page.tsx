@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, ExternalLink, Download, Calendar, Award } from "lucide-react"
+import { ArrowLeft, ExternalLink, Calendar, Award } from "lucide-react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
@@ -36,7 +36,7 @@ export default function Certificates() {
       date: "2024",
       description:
         "The Microsoft Certified: Power BI Data Analyst Associate is a certificate issued by Microsoft to individuals who have completed and passed the PL-300 exam. This exam, held by Microsoft, tests a candidate's understanding of how to use the tools in Power BI.",
-      skills: ["Power BI", "Data Visualization", "Data Analysis","Data Storytelling"],
+      skills: ["Power BI", "Data Visualization", "Data Analysis", "Data Storytelling"],
       image: "/Microsoft-Certified.png",
       credentialUrl: "https://drive.google.com/file/d/1M4NJUczGkUJLmvmGKz2RXbgbQwiDPjlX/view?usp=sharing",
       type: "Intermediete",
@@ -45,7 +45,8 @@ export default function Certificates() {
       title: "Data Science (Fresh Graduate Academy)",
       issuer: "Digital Talent Scolarship - Kominfo",
       date: "2024",
-      description: "The Data Science (Fresh Graduate Academy) is a program organized by the Digital Talent Scholarship - Kominfo for undergraduate students and professional workers. It teaches participants how to model, visualize, and analyze data using Power BI tools.",
+      description:
+        "The Data Science (Fresh Graduate Academy) is a program organized by the Digital Talent Scholarship - Kominfo for undergraduate students and professional workers. It teaches participants how to model, visualize, and analyze data using Power BI tools.",
       skills: ["Power BI", "Data Visualization", "Data Analyzing"],
       image: "/Fresh-Graduate.png",
       credentialUrl: "https://drive.google.com/file/d/1cuhPNfj8nDniP-oR7FwC27qKucFjQF32/view?usp=sharing",
@@ -97,9 +98,7 @@ export default function Certificates() {
           <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-6">
             <Award className="h-8 w-8 text-primary" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">
-            Certificates
-          </h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">Certificates</h2>
           <p className="text-xl text-muted-foreground mb-8 text-pretty max-w-3xl mx-auto">
             A collection of my certifications and achievements for my skills.
           </p>
@@ -166,7 +165,7 @@ export default function Certificates() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="p-0 h-auto group/btn hover:text-primary transition-colors flex-1"
+                      className="p-0 h-auto group/btn hover:text-white transition-colors flex-1"
                       asChild
                     >
                       <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer">

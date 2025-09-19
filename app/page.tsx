@@ -351,7 +351,7 @@ export default function Portfolio() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="p-0 h-auto group/btn hover:text-primary transition-colors"
+                        className="p-0 h-auto group/btn hover:text-white transition-colors"
                       >
                         View Project
                         <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
