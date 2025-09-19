@@ -257,11 +257,9 @@ export default function Portfolio() {
               </p>
               <div className="flex space-x-4">
                 <a href="https://github.com/immanuel1210" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
+                  <Button variant="outline"
                     size="sm"
-                    className="hover:scale-110 hover:black transition-all duration-300 bg-transparent"
-                  >
+                    className="hover:text-white active:text-white hover:scale-110 hover:bg-black transition-all duration-300 bg-transparent">
                     <Github className="h-4 w-4 mr-2" />
                     GitHub
                   </Button>
