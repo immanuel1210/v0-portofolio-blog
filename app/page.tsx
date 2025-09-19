@@ -208,7 +208,7 @@ export default function Portfolio() {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
-                variant="outline"
+                variant="ghost"
                 size="lg"
                 className="hover:scale-105 transition-all duration-300 bg-transparent"
                 asChild
@@ -257,7 +257,7 @@ export default function Portfolio() {
               </p>
               <div className="flex space-x-4">
                 <a href="https://github.com/immanuel1210" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline"
+                  <Button variant="ghost"
                     size="sm"
                     className="hover:text-white active:text-white hover:scale-110 hover:bg-black transition-all duration-300 bg-transparent">
                     <Github className="h-4 w-4 mr-2" />
@@ -266,7 +266,7 @@ export default function Portfolio() {
                 </a>
                 <a href="https://www.linkedin.com/in/immanuel-simarsoit/" target="_blank" rel="noopener noreferrer">
                   <Button
-                    variant="outline"
+                    variant="ghost"
                     size="sm"
                     className="hover:scale-110 hover:black transition-all duration-300 bg-transparent"
                   >
@@ -349,7 +349,7 @@ export default function Portfolio() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="p-0 h-auto group/btn hover:text-white hover:bg-black md:hover:bg-transparent md:hover:text-white transition-colors"
+                        className="p-0 h-auto group/btn hover:scale-110 hover:text-white hover:bg-black transition-colors transition-all duration-300 bg-transparent"
                       >
                         View Project
                         <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
