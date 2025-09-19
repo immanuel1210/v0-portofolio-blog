@@ -288,7 +288,7 @@ export default function Experience() {
             </Button>
             <Link href="/">
               <Button
-                variant="outline"
+                variant="ghost"
                 size="lg"
                 className="hover:scale-105 transition-all duration-300 bg-transparent"
               >

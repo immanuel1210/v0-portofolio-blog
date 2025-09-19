@@ -165,7 +165,7 @@ export default function Certificates() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="p-0 h-auto group/btn hover:text-white hover:bg-black md:hover:bg-transparent md:hover:text-white transition-colors flex-1"
+                      className="px-4 py-2 h-auto group/btn hover:scale-110 hover:text-white hover:bg-black transition-colors transition-all duratoin-300 bg-transparent"
                       asChild
                     >
                       <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer">
@@ -197,7 +197,7 @@ export default function Certificates() {
             </Link>
             <Button
               size="lg"
-              variant="outline"
+              variant="ghost"
               className="hover:scale-105 transition-all duration-300 bg-transparent"
               asChild
             >
