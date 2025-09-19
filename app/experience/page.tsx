@@ -62,7 +62,7 @@ export default function Experience() {
         "During my internship at the Human Resource Planning and Management Division of PT Pelindo Multi Terminal, I was responsible for managing intern data entry and updates in spreadsheets, as well as preparing and consolidating attendance records to ensure accurate allowance payments. I also supported the recruitment process by coordinating interview schedules and preparations, while actively contributing to company activities as a Team Leader, documentation staff, MC, and promotional material designer. In addition, I managed the division’s intern Instagram account by creating and publishing content to highlight internship activities.",
       achievements: [
         "Trusted as Team Leader for the Company Visit Event of Universiti Malaysia Sarawak at Pelindo Multi Terminal, where I coordinated and collaborated with fellow interns to ensure the event was successfully executed.",
-        "Appointed as Team Leader for the Tour Talent: Kampung Komunitas Ibu Profesional Sumatera Utara event, collaborating with mentors and fellow interns to organize participant welcoming activities at Bandar Deli Passenger Terminal. Responsible for introducing the company’s roles and functions to participants while ensuring the event was well-coordinated and successfully executed.",
+        "Trusted as Team Leader for the Tour Talent: Kampung Komunitas Ibu Profesional Sumatera Utara event, collaborating with mentors and fellow interns to organize participant welcoming activities at Bandar Deli Passenger Terminal. Responsible for introducing the company’s roles and functions to participants while ensuring the event was well-coordinated and successfully executed.",
       ],
       skills: [
         "Data Entry",
