@@ -55,7 +55,7 @@ export default function Certificates() {
       title: "Excel Basics for Data Analysis",
       issuer: "IBM",
       date: "2024",
-      description: "Certification in data modeling, visualization, and business intelligence using Power BI.",
+      description: "Certification in data modeling, visualization, and business intelligence using Excel.",
       skills: ["Excel", "Data Analysis", "Data Preprocessing", "Data Visualization"],
       image: "/Excel-Basics.png",
       credentialUrl: "https://drive.google.com/file/d/1HEtZj9CuEYR0_IAHYoyQSr7OoCGU44r1/view?usp=sharing",
