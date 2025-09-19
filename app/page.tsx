@@ -260,7 +260,7 @@ export default function Portfolio() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="hover:scale-110 hover:shadow-md transition-all duration-300 bg-transparent"
+                    className="hover:scale-110 hover:black transition-all duration-300 bg-transparent"
                   >
                     <Github className="h-4 w-4 mr-2" />
                     GitHub
@@ -270,7 +270,7 @@ export default function Portfolio() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="hover:scale-110 hover:shadow-md transition-all duration-300 bg-transparent"
+                    className="hover:scale-110 hover:black transition-all duration-300 bg-transparent"
                   >
                     <Linkedin className="h-4 w-4 mr-2" />
                     LinkedIn
