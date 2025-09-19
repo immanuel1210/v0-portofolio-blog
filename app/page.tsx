@@ -319,6 +319,14 @@ export default function Portfolio() {
                   image: "/chart.jpg",
                   link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
                 },
+                {
+                  title: "Power BI Project",
+                  description:
+                    "Ongoing Power BI Project",
+                  tech: ["Power BI", "Data Analysis", "Data Visualization","Data Modelling"],
+                  image: "/chart.jpg",
+                  link: "#",
+                },
               ].map((project, index) => (
                 <Card
                   key={index}
