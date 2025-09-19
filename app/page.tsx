@@ -168,7 +168,7 @@ export default function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-2 text-black dark:text-black hover:text-white hover:bg-black rounded-lg transition-all duration-300"
+                  className="block w-full text-left px-4 py-2 text-black dark:text-black hover:text-white hover:bg-black md:hover:text-black md:hover:bg-transparent rounded-lg transition-all duration-300"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {item.label}
@@ -351,7 +351,7 @@ export default function Portfolio() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="p-0 h-auto group/btn hover:text-white transition-colors"
+                        className="p-0 h-auto group/btn hover:text-white hover:bg-black md:hover:bg-transparent md:hover:text-white transition-colors"
                       >
                         View Project
                         <ExternalLink className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />

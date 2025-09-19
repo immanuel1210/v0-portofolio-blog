@@ -165,7 +165,7 @@ export default function Certificates() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="p-0 h-auto group/btn hover:text-white transition-colors flex-1"
+                      className="p-0 h-auto group/btn hover:text-white hover:bg-black md:hover:bg-transparent md:hover:text-white transition-colors flex-1"
                       asChild
                     >
                       <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer">
