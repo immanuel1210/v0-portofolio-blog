@@ -64,12 +64,22 @@ export default function Certificates() {
     },
     {
       title: "TOEFL ITP",
-      issuer: "ETS",
+      issuer: "IES Foundation",
       date: "2025",
       description: "English Proficiency Test.",
       skills: ["English"],
       image: "/logo-ets.webp",
       credentialUrl: "https://drive.google.com/file/d/1-JdxfCOABJkQzSkzlWdSAIs-hJXdIH7H/view?usp=sharing",
+      type: "Intermediete",
+    },
+    {
+      title: "SQL for Data Science",
+      issuer: "University of California, Davis - Coursera",
+      date: "2025",
+      description: "Certificate after completing the SQL for Data Science course in Coursera. Learn about the use of SQL Query to do basic data analysis",
+      skills: ["SQL","SQLite","Data Profiling","MySQL"],
+      image: "/SQL_for_DataScience.png",
+      credentialUrl: "https://drive.google.com/file/d/1bEftHoMOIuUOvM6MW9YQOwuGUFPx2SBC/view?usp=sharing",
       type: "Intermediete",
     },
   ]

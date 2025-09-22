@@ -386,7 +386,7 @@ export default function Portfolio() {
               {[
                 {
                   category: "Analysis",
-                  skills: ["Data Analysis", "Data Visualization", "Data Scientist", "Machine Learning"],
+                  skills: ["Data Analysis", "Data Visualization", "Data Scientist", "Machine Learning","SQL"],
                 },
                 {
                   category: "Tools",
