@@ -304,6 +304,14 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
               {[
                 {
+                  title: "Stock Market Trend Analysis: State-owned Banks vs. IHSG (2020 - 2025)",
+                  description:
+                    "Comparative performance analysis of three Indonesian state-owned banks (BMRI, BBRI, BBNI) compared to the Composite Stock Price Index (IHSG) from 2020 to 2025",
+                  tech: ["Excel", "Data Analysis", "Data Visualization"],
+                  image: "/chart.jpg",
+                  link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
+                },
+                {
                   title: "Time Series Forecasting of Gold (USD) Prices with LSTM",
                   description:
                     "Developed a time series forecasting model to predict Gold-USD prices using 10 years of historical data with LSTM.",
@@ -312,12 +320,12 @@ export default function Portfolio() {
                   link: "https://github.com/immanuel1210/Prediksi-Harga-Emas-menggunakan-metode-LSTM",
                 },
                 {
-                  title: "Risk, Return, and Liquidity Analysis of Banking Stocks vs. IHSG for the Period 2020–2025",
+                  title: "SQL for Data Science (Coursera Final Project)",
                   description:
-                    "Comparative performance analysis of three Indonesian state-owned banks (BMRI, BBRI, BBNI) compared to the Composite Stock Price Index (IHSG) from 2020 to 2025",
-                  tech: ["Excel", "Data Analysis", "Data Visualization"],
-                  image: "/chart.jpg",
-                  link: "https://github.com/immanuel1210/Analisis-Risiko-Return-dan-Likuiditas-Saham-Perbankan-vs-IHSG-Periode-2020---2025",
+                    "Solutions for the Final Project Assignment in the SQL for Data Science course. This repository contains SQL queries demonstrating skills in data extraction, filtering, aggregation, joins, and subqueries to analyze and summarize datasets.",
+                  tech: ["SQL", "SQLite", "Problem Solving","Data Analysis"],
+                  image: "/SQL_Queries.png",
+                  link: "https://github.com/immanuel1210/SQL-for-Data-Science-Coursera-Final-Project",
                 },
                 {
                   title: "Power BI Project",
