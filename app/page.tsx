@@ -393,16 +393,16 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  category: "Analysis",
-                  skills: ["Data Analysis", "Data Visualization", "Data Scientist", "Machine Learning","SQL"],
+                  category: "Technical Skills",
+                  skills: ["Data Analysis & Visualization", "Data Scientist", "Data Modelling","Machine Learning","SQL","Software Installation","Troubleshooting"],
                 },
                 {
                   category: "Tools",
-                  skills: ["Python", "Microsoft Office", "MySQL", "Power BI"],
+                  skills: ["Python", "Microsoft Office (Word, Excel and PowerPoint)", "MySQL", "SQLite","Power BI","Google Data Studio"],
                 },
                 {
                   category: "Soft Skill",
-                  skills: ["Adaptability", "Responsibility", "Critical Thinking", "Problem Solving"],
+                  skills: ["Adaptability", "Responsibility", "Critical Thinking", "Problem Solving","Communication","Attention to Detail"],
                 },
               ].map((skillGroup, index) => (
                 <Card
